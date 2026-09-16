@@ -1,10 +1,12 @@
-if [ $# -eq 0 ]; then
-    echo "NO arguments supplied"
-else
-    for i in "$1" "$2" "$3"
-    do
-            if [ -n "$i" ]; then
-                echo "$i"
-            fi  
-    done  
+#!/bin/bash
+
+# Check if any arguments are passed
+if [ "$#" -eq 0 ]; then
+    echo "No arguments supplied"
+    exit 1
 fi
+
+# Loop through all arguments
+for arg in "$@"; do
+    echo "$arg"
+done
