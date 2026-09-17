@@ -1,15 +1,12 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Change Background</title>
-    <link rel="stylesheet" href="background.css">
-</head>
+const button = document.getElementById("changeColor");
 
-<body>
+button.addEventListener("click", function() {
 
-    <button id="changeColor">Change Background</button>
+    const red = Math.floor(Math.random() * 256);
+    const green = Math.floor(Math.random() * 256);
+    const blue = Math.floor(Math.random() * 256);
 
-    <script src="background.js"></script>
+    const randomColor = "rgb(" + red + ", " + green + ", " + blue + ")";
 
-</body>
-</html>
+    document.body.style.backgroundColor = randomColor;
+});
